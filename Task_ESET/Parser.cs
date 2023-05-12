@@ -98,7 +98,7 @@ namespace Task_ESET
 
                                     if (_helper.FindUnusualChar(child.Name) == true)
                                     {
-                                        list.LastOrDefault().Info = ", Info: May contain incomplete or damaged data";
+                                        lastRecord.Info = ", Info: May contain incomplete or damaged data";
                                     }
                                 }
                                 else

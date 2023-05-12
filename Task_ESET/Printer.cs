@@ -13,9 +13,11 @@ namespace Task_ESET
     public class Printer
     {
         public Parser _parser;
-        public Printer(Parser parser)
+        public Helper _helper;
+        public Printer(Parser parser, Helper helper)
         {
             _parser = parser;
+            _helper = helper;
         }
 
         /// <summary>
@@ -23,7 +25,7 @@ namespace Task_ESET
         /// Also writes these data to a text file.
         /// </summary>
         /// <param name="list"></param>
-        public void Print(List<InfectedFile> list)
+        public void Print(List<InfectedFile> list, DateTime t)
         {
             string filePath = "C:\\Users\\bohus\\OneDrive\\Počítač\\ESET\\ESET_Parser task OUTPUT.txt";
 
@@ -93,6 +95,9 @@ namespace Task_ESET
                             }
                         }
                     }
+
+                    Console.WriteLine(_helper.TimeCatcher(t));
+                    streamWriter.WriteLine(_helper.TimeCatcher(t));
                 }
             }
 

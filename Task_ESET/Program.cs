@@ -7,7 +7,7 @@ using Task_ESET.Models;
 
 Helper helper = new Helper();
 Parser parser = new Parser(helper);
-Printer printer = new Printer(parser);
+Printer printer = new Printer(parser, helper);
 
 string exit;
 
@@ -17,8 +17,7 @@ do
     List<InfectedFile> list = result.Item1;
     DateTime t = result.Item2;
 
-    printer.Print(list);
-    helper.TimeCatcher(t);
+    printer.Print(list, t);
 
     Console.Write("\nPress y to exit the program, otherwise press any other key. Confirm with enter: ");
     exit = Console.ReadLine();

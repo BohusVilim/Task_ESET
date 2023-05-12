@@ -37,12 +37,12 @@ namespace Task_ESET
         }
 
         /// <summary>
-        /// Calculates the time elapsed since a given parameter value and prints the result to the console.
+        /// Calculates the time elapsed since a given parameter value and returns the result as a string.
         /// </summary>
         /// <param name="t"></param>
-        public void TimeCatcher(DateTime t)
+        public string TimeCatcher(DateTime t)
         {
-            Console.WriteLine("\nTime response: " + (DateTime.Now - t).ToString());
+            return "\nTime response: " + (DateTime.Now - t).ToString();
         }
     }
 }

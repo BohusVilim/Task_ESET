@@ -9,7 +9,7 @@ Helper helper = new Helper();
 Parser parser = new Parser(helper);
 Printer printer = new Printer(parser);
 
-string exit = "n";
+string exit;
 
 do
 {

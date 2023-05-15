@@ -14,13 +14,13 @@ namespace Task_ESET
         /// <summary>
         /// Checks a given parameter for unusual characters. Returns true if any unusual character is found. Otherwise, returns false.
         /// </summary>
-        /// <param name="line"></param>
+        /// <param name="s"></param>
         /// <returns></returns>
-        public bool FindUnusualChar(string line)
+        public bool FindUnusualChar(string s)
         {
             try
             {
-                foreach (char ch in line)
+                foreach (char ch in s)
                 {
                     if (Char.IsControl(ch) || (Char.IsWhiteSpace(ch) && !Char.IsSeparator(ch)) || (ch > 127 && ch != '»'))
                     {

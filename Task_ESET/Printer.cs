@@ -27,7 +27,7 @@ namespace Task_ESET
         /// <param name="list"></param>
         public void Print(List<InfectedFile> list, DateTime t)
         {
-            string filePath = "C:\\Users\\bohus\\OneDrive\\Počítač\\ESET\\ESET_Parser task OUTPUT.txt";
+            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "ESET_Parser task OUTPUT.txt");
 
             try
             {

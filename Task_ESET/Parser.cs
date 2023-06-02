@@ -117,6 +117,7 @@ namespace Task_ESET
                                     }
 
                                     list.Add(infectedFile);
+
                                 }
                             }
                         }
